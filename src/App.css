@@ -1,0 +1,95 @@
+.spiral-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-left: 0;
+  margin-right: 12px;
+  transition: background 0.2s;
+}
+.spiral-btn:hover {
+  background: #1746a2;
+}
+
+.spiral-file-input {
+  display: none;
+}
+.spiral-file-label {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-right: 12px;
+  display: inline-block;
+  transition: background 0.2s;
+}
+.spiral-file-label:hover {
+  background: #1746a2;
+}
+body {
+  background: #f7f7fa;
+  font-family: system-ui, sans-serif;
+}
+
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.spiral-app h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.spiral-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.spiral-list {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.spiral-thumb {
+  border: 2px solid #ccc;
+  transition: border 0.2s;
+}
+.spiral-thumb.selected {
+  border: 2px solid #646cff;
+  box-shadow: 0 0 8px #646cff44;
+}
+
+.spiral-display {
+  margin-top: 2rem;
+}
+
+.spiral-circle {
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+  color: #888;
+}
