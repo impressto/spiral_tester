@@ -13,7 +13,3 @@ This app allows users to select or upload spiral images, display them in a circu
 2. Start the development server: `npm run dev`
 3. Open [http://localhost:5173](http://localhost:5173) in your browser
 
-## To Do
-- Implement image selection and upload
-- Create circular display and rotation logic
-- Add speed control UI

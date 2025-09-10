@@ -68,6 +68,7 @@ function App() {
   const [selectedImage, setSelectedImage] = useState(spiralImages[0]);
   const [uploadedImage, setUploadedImage] = useState(null);
   const [rotationSpeed, setRotationSpeed] = useState(5);
+  const [reverseDirection, setReverseDirection] = useState(false);
   const [uploadError, setUploadError] = useState('');
   const fileInputRef = useRef();
 
@@ -143,6 +144,17 @@ function App() {
             onChange={e => setRotationSpeed(Number(e.target.value))}
           />
           <span>{rotationSpeed}s</span>
+          <div style={{ marginTop: 10 }}>
+            <label>
+              <input
+                type="checkbox"
+                checked={reverseDirection}
+                onChange={e => setReverseDirection(e.target.checked)}
+                style={{ marginRight: 8 }}
+              />
+              Reverse Spin Direction
+            </label>
+          </div>
         </div>
       </div>
       <div className="spiral-display">
@@ -151,10 +163,12 @@ function App() {
             <div
               className="spiral-circle"
               style={{
-                animation: `spin ${rotationSpeed}s linear infinite`,
+                animation: `${reverseDirection ? 'spin-reverse' : 'spin'} ${rotationSpeed}s linear infinite`,
                 borderRadius: '50%',
-                width: 320,
-                height: 320,
+                width: '100%',
+                maxWidth: 320,
+                height: 'auto',
+                aspectRatio: '1',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -168,7 +182,12 @@ function App() {
               <img
                 src={imageSrc}
                 alt="Spiral"
-                style={{ width: 300, height: 300, borderRadius: '50%' }}
+                style={{ 
+                  width: '94%', 
+                  height: '94%', 
+                  objectFit: 'contain',
+                  borderRadius: '50%' 
+                }}
               />
             </div>
             <button className="spiral-btn" style={{marginTop: 16}} onClick={saveAsHeader}>

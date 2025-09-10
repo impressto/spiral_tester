@@ -35,7 +35,6 @@
   background: #1746a2;
 }
 body {
-  background: #f7f7fa;
   font-family: system-ui, sans-serif;
 }
 
@@ -44,6 +43,14 @@ body {
   margin: 0;
   padding: 2rem;
   text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
 }
 
 .spiral-app {
@@ -61,12 +68,29 @@ body {
   gap: 2rem;
   justify-content: center;
   margin-bottom: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .spiral-controls {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .spiral-controls > div {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 .spiral-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 0.5rem;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .spiral-thumb {
@@ -94,5 +118,32 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 480px) {
+  .spiral-app h1 {
+    font-size: 1.8rem;
+  }
+  
+  .spiral-thumb {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 6px !important;
+  }
+  
+  .spiral-btn {
+    margin-right: 6px;
+    margin-bottom: 6px;
   }
 }
