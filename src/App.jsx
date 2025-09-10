@@ -98,7 +98,6 @@ function App() {
 
   return (
     <div className="spiral-app">
-      <h1>Spiral Image Spinner</h1>
       <div className="spiral-controls">
         <div>
           <label>Select a spiral:</label>

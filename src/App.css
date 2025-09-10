@@ -41,8 +41,12 @@ body {
 
 #root {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0;
   padding: 2rem;
+  text-align: left;
+}
+
+.spiral-app {
   text-align: center;
 }
 
@@ -76,6 +80,7 @@ body {
 
 .spiral-display {
   margin-top: 2rem;
+  text-align: center;
 }
 
 .spiral-circle {
