@@ -105,7 +105,7 @@ function App() {
           <div className="spiral-list">
             {spiralImages.map((img, idx) => (
               <img
-                key={img}
+                key={idx}
                 src={img}
                 alt={`Spiral ${idx + 1}`}
                 className={`spiral-thumb${selectedImage === img ? ' selected' : ''}`}
